@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <header>
-          <h1>Budget Tracker</h1>
+          <span>Budget Tracker</span>
         </header>
         <main>{children}</main>
         <footer>
