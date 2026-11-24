@@ -24,7 +24,6 @@ export default function NavBar() {
 
   const LogoStyle = {
     color: "var(--accent-color)",
-    fontSize: "1.3rem",
     fontWeight: "bold",
   };
 
@@ -34,14 +33,15 @@ export default function NavBar() {
   };
 
   const LinkStyle = {
-    color: "#fff",
-    fontSize: "1rem",
+    color: "var(--background-color)",
+    fontSize: "1.1rem",
   };
 
   return (
     <nav style={navBarStyle}>
       <div className="nav-bar-container" style={NavBarContainerStyle}>
         <Link href="/" className="logo" style={LogoStyle}>
+          <i className="fa-solid fa-sack-dollar"></i>
           <span className="nav-bar-span">B</span>udget{" "}
           <span className="nav-bar-span">T</span>racker
         </Link>
@@ -49,6 +49,14 @@ export default function NavBar() {
           <Link
             href="/"
             className={pathname === "/" ? "active" : ""}
+            style={LinkStyle}
+          >
+            Home
+          </Link>
+
+          <Link
+            href="/dashboard"
+            className={pathname === "/dashboard" ? "active" : ""}
             style={LinkStyle}
           >
             Dashboard
@@ -66,6 +74,13 @@ export default function NavBar() {
             style={LinkStyle}
           >
             Categories
+          </Link>
+          <Link
+            href="/faqs"
+            className={pathname === "/faqs" ? "active" : ""}
+            style={LinkStyle}
+          >
+            FAQs
           </Link>
         </div>
       </div>
