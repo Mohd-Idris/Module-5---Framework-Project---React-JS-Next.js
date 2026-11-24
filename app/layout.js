@@ -1,4 +1,5 @@
 import "./globals.css";
+import NavBar from "../components/NavBar";
 
 export const metadata = {
   title: "Budget Tracker - Next.js App",
@@ -10,7 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <header>
-          <span>Budget Tracker</span>
+          <NavBar />
         </header>
         <main>{children}</main>
         <footer>
