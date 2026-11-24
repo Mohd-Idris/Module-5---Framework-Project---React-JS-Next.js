@@ -1,14 +1,17 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function NavBar() {
+  const pathname = usePathname();
+
   // Define styles for the navigation bar and its elements
   const navBarStyle = {
-    backgroundColor: "#1f2937",
+    backgroundColor: "var(--primary-color)",
     padding: "1rem 2rem",
     marginBottom: "2rem",
-    // borderBottom: '1px solid #dee2e6',
+    borderBottom: "1px solid var(--text-color)",
   };
 
   const NavBarContainerStyle = {
@@ -20,7 +23,7 @@ export default function NavBar() {
   };
 
   const LogoStyle = {
-    color: "#fff",
+    color: "var(--accent-color)",
     fontSize: "1.3rem",
     fontWeight: "bold",
   };
@@ -37,18 +40,31 @@ export default function NavBar() {
 
   return (
     <nav style={navBarStyle}>
-      <div style={NavBarContainerStyle}>
-        <Link href="/" style={LogoStyle}>
-          Budget Tracker
+      <div className="nav-bar-container" style={NavBarContainerStyle}>
+        <Link href="/" className="logo" style={LogoStyle}>
+          <span className="nav-bar-span">B</span>udget{" "}
+          <span className="nav-bar-span">T</span>racker
         </Link>
-        <div style={NavBarLinksContainerStyle}>
-          <Link href="/" style={LinkStyle}>
+        <div className="nav-links-container" style={NavBarLinksContainerStyle}>
+          <Link
+            href="/"
+            className={pathname === "/" ? "active" : ""}
+            style={LinkStyle}
+          >
             Dashboard
           </Link>
-          <Link href="/transactions" style={LinkStyle}>
+          <Link
+            href="/transactions"
+            className={pathname === "/transactions" ? "active" : ""}
+            style={LinkStyle}
+          >
             Transactions
           </Link>
-          <Link href="/categories" style={LinkStyle}>
+          <Link
+            href="/categories"
+            className={pathname === "/categories" ? "active" : ""}
+            style={LinkStyle}
+          >
             Categories
           </Link>
         </div>
