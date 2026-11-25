@@ -76,8 +76,8 @@ export default function NavBar() {
             Categories
           </Link>
           <Link
-            href="/faqs"
-            className={pathname === "/faqs" ? "active" : ""}
+            href="/faq"
+            className={pathname === "/faq" ? "active" : ""}
             style={LinkStyle}
           >
             FAQs

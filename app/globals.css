@@ -1,8 +1,10 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Inter', sans-serif;
   box-sizing: border-box;
   text-decoration: none;
+  list-style: none;
 }
 
 :root {
@@ -23,7 +25,6 @@
 }
 
 body {
-  font-family: 'Inter', sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.6;
@@ -138,9 +139,73 @@ header {
   font-size: 4rem;
 }
 
-
 .home-image-container .home-img {
   max-width: 100%;
   height: auto;
   border-radius: 50px;
+}
+
+/* FAQ Page Styles */
+.faq-container {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+.faq-heading {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  color: var(--primary-color);
+}
+
+.faq-heading i {
+  background: linear-gradient(to left, var(--text-color));
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+  padding: 0.5rem 0;
+  border-radius: 18%;
+  outline: none;
+}
+
+.faq-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.faq-content {
+  padding: 1.25rem;
+  background-color: var(--light-green-bgcolor);
+  border-radius: 0.75rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-left: 4px solid var(--primary-color);
+}
+
+.faq-content:hover {
+  background-color: var(--light-gold-bgcolor);
+  border: 3px solid var(--text-color);
+  box-shadow: 5px 5px var(--light-green-bgcolor);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.faq-sub-heading {
+  color: var(--primary-color);
+  margin-top: 0;
+  font-size: 1.1rem;
+}
+
+.faq-sub-heading i {
+  background: linear-gradient(to left, var(--text-color));
+  color: var(--accent-color);
+  margin-right: 0.5rem;
+  padding: 0.3rem 0;
+  border-radius: 30%;
+  outline: none;
+}
+
+.faq-text {
+  color: var(--sub-text-color);
+  margin-top: 0.75rem;
+  line-height: 1.6;
 }
