@@ -10,11 +10,11 @@ export default function Home() {
           ). Simple, Secure, and completely private.
         </p>
         <div className="home-buttons-container">
-          <a href="/dashboard" className="primary-button">
+          <a href="/transaction" className="primary-button">
             Get started
           </a>
-          <a href="/transactions" className="secondary-button">
-            Learn more
+          <a href="/faq" className="secondary-button">
+            Have a question?
           </a>
         </div>
       </div>

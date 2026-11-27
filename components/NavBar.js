@@ -51,16 +51,9 @@ export default function NavBar() {
             className={pathname === "/" ? "active" : ""}
             style={LinkStyle}
           >
-            Home
-          </Link>
-
-          <Link
-            href="/dashboard"
-            className={pathname === "/dashboard" ? "active" : ""}
-            style={LinkStyle}
-          >
             Dashboard
           </Link>
+
           <Link
             href="/transactions"
             className={pathname === "/transactions" ? "active" : ""}
@@ -80,7 +73,7 @@ export default function NavBar() {
             className={pathname === "/faq" ? "active" : ""}
             style={LinkStyle}
           >
-            FAQs
+            FAQ
           </Link>
         </div>
       </div>
